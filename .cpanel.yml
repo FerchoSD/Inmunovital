@@ -1,0 +1,13 @@
+  ---
+  deployment:
+    tasks:
+      # Ruta de implementación en el servidor (directorio público)
+      - export DEPLOYPATH=/home2/inmunovi/repositories/Inmunovital 
+
+      
+      # Copiar todos los archivos HTML
+      - /bin/cp *.html $DEPLOYPATH
+      
+      
+      # Establecer permisos adecuados
+      - /bin/chmod -R 755 $DEPLOYPATH
